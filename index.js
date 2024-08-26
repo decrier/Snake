@@ -36,3 +36,14 @@ function quitGame() {
     cursor.goto(1, 10);
     process.exit();
 }
+function drawHorizontalLine(col, row, length) {
+    for (let i = 0; i < length; i++) {
+        cursor.goto(col + i, row).write(' ');        
+    }
+}
+
+function drawVerticalLine(col, row, length) {
+    for (let i = 0; i < length; i++) {
+        cursor.goto(col, row + i).write(' ');        
+    }
+}
